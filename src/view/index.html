@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
- <%= require('html-loader!./layout/html-head.html') %>
+ <head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title>happymmall</title>
+ </head>
 <body>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta nobis, magnam expedita doloribus, alias, eum similique placeat sit fuga ratione error non reprehenderit dolorem illo. Hic fugit provident dolorem quam.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta nobis, magnam expedita doloribus, alias, eum similique placeat sit fuga ratione error non reprehenderit dolorem illo. Hic fugit provident dolorem quam.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta nobis, magnam expedita doloribus, alias, eum similique placeat sit fuga ratione error non reprehenderit dolorem illo. Hic fugit provident dolorem quam.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta nobis, magnam expedita doloribus, alias, eum similique placeat sit fuga ratione error non reprehenderit dolorem illo. Hic fugit provident dolorem quam.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta nobis, magnam expedita doloribus, alias, eum similique placeat sit fuga ratione error non reprehenderit dolorem illo. Hic fugit provident dolorem quam.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta nobis, magnam expedita doloribus, alias, eum similique placeat sit fuga ratione error non reprehenderit dolorem illo. Hic fugit provident dolorem quam.
-    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <%= require('html-loader!./layout/nav.html') %>
+    <%= require('html-loader!./layout/footer.html') %>
 </body>
 </html>
