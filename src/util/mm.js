@@ -2,7 +2,7 @@
  * @Author: chenjiezi 
  * @Date: 2018-04-13 10:39:46 
  * @Last Modified by: chenjiezi
- * @Last Modified time: 2018-04-14 16:45:36
+ * @Last Modified time: 2018-04-15 15:49:59
  */
  
 'use strict';
@@ -83,7 +83,7 @@ var _mm = {
     },
     // 统一登录处理
     doLogin : function(){
-        window.location.href = './login.html?redirect=' + encodeURIComponent(indow.location.href);
+        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     goHome : function(){
         window.location.href = './index.html';

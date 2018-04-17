@@ -2,10 +2,17 @@
 <html lang="en">
  <head>
     <%= require('html-loader!./layout/head-common.html') %>
-    <title>happymmall</title>
+    <title>happymmall电商平台</title>
  </head>
 <body>
     <%= require('html-loader!./layout/nav.html') %>
+    <%= require('html-loader!./layout/header.html') %>
+    <div class="page-wrap w">
+        <%= require('html-loader!./layout/nav-side.html') %>
+        <div class="content with-nav">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit laudantium doloremque iusto quisquam doloribus commodi! Doloremque mollitia inventore ea sunt aspernatur nesciunt, ab totam distinctio eaque! Quod iste nisi quasi.
+        </div>
+    </div>
     <%= require('html-loader!./layout/footer.html') %>
 </body>
 </html>
