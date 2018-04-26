@@ -2,7 +2,7 @@
  * @Author: chenjiezi 
  * @Date: 2018-04-14 22:27:23 
  * @Last Modified by: chenjiezi
- * @Last Modified time: 2018-04-15 21:18:23
+ * @Last Modified time: 2018-04-23 17:03:24
  */
  
 'use strict';
@@ -26,7 +26,7 @@ var nav = {
         });
         // 注册点击事件
         $('.js-register').click(function(){
-            window.location.href = './register.html';
+            window.location.href = './user-register.html';
         });
         // 退出点击事件
         $('.js-logout').click(function(){

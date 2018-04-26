@@ -2,7 +2,7 @@
  * @Author: chenjiezi 
  * @Date: 2018-04-16 13:29:15 
  * @Last Modified by: chenjiezi
- * @Last Modified time: 2018-04-17 10:53:37
+ * @Last Modified time: 2018-04-26 10:44:55
  */
  
 'use strict';
@@ -16,7 +16,7 @@ var navSide = {
         navList : [
             {name : 'user-center', desc : '个人中心', href: './user-center.html'},
             {name : 'order-list', desc : '我的订单', href: './order-list.html'},
-            {name : 'pass-update', desc : '修改密码', href: './pass-update.html'},
+            {name : 'user-pass-update', desc : '修改密码', href: './user-pass-update.html'},
             {name : 'about', desc : '关于MMall', href: './about.html'}
         ] 
     },

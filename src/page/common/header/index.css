@@ -2,7 +2,7 @@
  * @Author: chenjiezi 
  * @Date: 2018-04-15 21:23:43 
  * @Last Modified by: chenjiezi
- * @Last Modified time: 2018-04-16 13:06:45
+ * @Last Modified time: 2018-04-25 13:27:27
  */
  /* 通用头部导航 */
 
@@ -33,4 +33,14 @@
     position: absolute;
     width: 80px;
     height: 44px;
+}
+/* 面包屑导航 */
+.crumb{
+    margin-bottom: 15px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #888;
+    background: #eee;
+    border-top: 2px solid #c60023;
 }
