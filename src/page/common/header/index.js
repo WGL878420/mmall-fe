@@ -2,7 +2,7 @@
  * @Author: chenjiezi 
  * @Date: 2018-04-15 21:23:48 
  * @Last Modified by: chenjiezi
- * @Last Modified time: 2018-04-23 17:54:48
+ * @Last Modified time: 2018-04-29 19:36:56
  */
  
 'use strict';
@@ -11,11 +11,11 @@ var _mm = require('util/mm.js');
 // 通用页面头部
 var header = {
     init : function(){
+        this.onLoad();
         this.bindEvent();
-        
     },   
     // ?
-    onload : function(){
+    onLoad : function(){
         var keyword = _mm.getUrlParam('keyword');
         // keyword存在，则回填输入框
         if(keyword){
