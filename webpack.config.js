@@ -2,7 +2,7 @@
  * @Author: chenjiezi 
  * @Date: 2018-04-06 22:48:18 
  * @Last Modified by: chenjiezi
- * @Last Modified time: 2018-05-01 15:00:34
+ * @Last Modified time: 2018-05-04 15:17:37
  */
 
 var webpack             = require('webpack');
@@ -21,6 +21,7 @@ var getHtmlConfig       = function(name, title) {
     return {
         template : './src/view/' + name + '.html',
         filename : 'view/' + name + '.html',
+        favicon  : './favicon.ico',
         title    : title, 
         inject   : true,
         hash     : true,
@@ -45,13 +46,14 @@ var config = {
         'user-center'            : ['./src/page/user-center/index.js'],
         'user-center-update'     : ['./src/page/user-center-update/index.js'],
         'user-pass-update'       : ['./src/page/user-pass-update/index.js'],
-        'result'                 : ['./src/page/result/index.js']
+        'result'                 : ['./src/page/result/index.js'],
+        'about'                  : ['./src/page/about/index.js']
         
     },
     output: {
-        path: './dist',
-        publicPath : '/dist',
-        filename: 'js/[name].js'
+        path        : __dirname + '/dist/',
+        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
+        filename    : 'js/[name].js'
     },
     externals: {
         'jquery' : 'window.jQuery',
@@ -65,12 +67,17 @@ var config = {
                 loader: 'url-loader?limit=100&name=resource/[name].[ext]'
             },
             { test: /\.string$/,
-                loader: 'html-loader'
+                loader: 'html-loader',
+                query : {
+                    minimize : true,
+                    removeAttributeQuotes : false
+                }
             }
         ] 
     },
     resolve : {
         alias : {
+            node_modules    : __dirname + '/node_modules',
             util            : __dirname + '/src/util',
             page            : __dirname + '/src/page',
             service         : __dirname + '/src/service',
@@ -100,8 +107,8 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-center', '个人中心')),
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
-        new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
-
+        new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
+        new HtmlWebpackPlugin(getHtmlConfig('about', '关于MMall'))
     ]
 
 };  
