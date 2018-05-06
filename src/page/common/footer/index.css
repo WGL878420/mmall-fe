@@ -1,0 +1,19 @@
+/*
+ * @Author: chenjiezi 
+ * @Date: 2018-04-15 16:44:41 
+ * @Last Modified by: chenjiezi
+ * @Last Modified time: 2018-04-15 16:49:26
+ */
+.footer{
+    padding-bottom: 10px;
+}
+.footer .links,
+.footer .copyright{
+    text-align: center;
+    color: #666666;
+    line-height: 30px;
+}
+
+.footer .links .link{
+    padding: 0 10px;
+}
